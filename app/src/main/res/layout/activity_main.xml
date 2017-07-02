@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.michaeledegware.www.luxdental.MainActivity">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/crop_layout"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/view_imageid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.48"
+            />
+
+
+        <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+
+            <Button
+                android:id="@+id/save_image"
+                android:layout_width="26.5pt"
+                android:layout_height="26.5pt"
+                android:layout_marginLeft="10pt"
+                android:layout_marginRight="40pt"
+                android:background="@drawable/round_button"
+                android:text="Save" />
+
+            <Button
+                android:id="@+id/return_"
+                android:layout_width="26.5pt"
+                android:layout_height="26.5pt"
+                android:layout_marginLeft="40pt"
+                android:layout_marginRight="10pt"
+                android:background="@drawable/round_button"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:text="Back" />
+        </RelativeLayout>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:id="@+id/camera_layout"
+        android:layout_height="fill_parent">
+
+        <SurfaceView
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:id = "@+id/image_captured"/>
+        <ZoomControls
+            android:id="@+id/zoomControls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:layout_width="80dp"
+            android:layout_marginTop="200dp"
+            android:layout_gravity="center"
+            android:layout_height="80dp"
+            android:text="capture"
+            android:textStyle="italic"
+            android:id = "@+id/capture"
+            android:background="@drawable/round_button"/>
+    </FrameLayout>
+    </LinearLayout>
+    
+
